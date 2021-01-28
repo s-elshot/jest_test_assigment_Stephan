@@ -1,34 +1,33 @@
-function add(number1,number2){
-    sum = number1+number2;
-    return sum;
-}
+const {add, findByName, multiply,getPositives} = require("./index")
 
-function findByName(users, name){
-    for (let i = 0; i < users.length; i++) {
-        const user = users[i];
+test("multiply() function should return the product of 2 numbers", ()=> {
 
-        if (user.name === name ){
-            console.log("found "+ name);
-            return user
-        }
-    } return null
-}
+//arrange
+const num1 = 8;
+const num2 = 7;
 
+//act
+const result = multiply(num1,num2)
 
+//assert
+expect(result).toBe(56);
+})
 
 
 test("add() function should return sum of 2 numbers", ()=> {
 
 //arrange
-const number1 = 5;
-const number2 = 7;
+    const number1 = 5;
+    const number2 = 7;
 
 //act
-const sum = add(number1,number2)
+    const sum = add(number1,number2)
 
 //assert
-expect(sum).toBe(12);
+    expect(sum).toBe(12);
 })
+
+
 
 
 test("findByName() function returns an object from an array with a specified name", ()=> {
@@ -67,6 +66,17 @@ test("findByName should return null, if the element is not found", () => {
 
 //assert
     expect(user).toBeNull();
-
-
 })
+
+
+test("getPositives() function returns an arraylist with only positive numbers", ()=> {
+
+//arrange
+    let inArray = [-5, 10, -3, 12, -9, 5, 90, 0, 1];
+//act
+    let swapArray = getPositives(inArray);
+
+//assert
+    expect(swapArray).toEqual([10, 12, 5, 90, 0, 1])
+})
+
