@@ -1,6 +1,5 @@
 
 // function getPositives#1 - schrijf een functie (getPositives) die enkel de positieve getallen van een array retourneert.
-
 function getPositives(inArray) {
 
     const swapArray = [];
@@ -18,6 +17,9 @@ function getPositives(inArray) {
 
 // exported functions
 module.exports = {
+    add: add,
+    findByName: findByName,
+    multiply: multiply,
     getPositives: getPositives,
 }
 

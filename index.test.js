@@ -1,6 +1,7 @@
 // import functions index.js
 const {add, findByName, multiply,getPositives} = require("./index")
 
+// test getPositives()
 test("getPositives() function returns an arraylist with only positive numbers", ()=> {
 
 //arrange
