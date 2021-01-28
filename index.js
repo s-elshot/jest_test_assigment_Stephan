@@ -17,9 +17,6 @@ function getPositives(inArray) {
 
 // exported functions
 module.exports = {
-    add: add,
-    findByName: findByName,
-    multiply: multiply,
     getPositives: getPositives,
 }
 
